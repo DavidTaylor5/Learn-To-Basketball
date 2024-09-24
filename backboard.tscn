@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://d4s53m0p2uba"]
+
+[node name="Backboard" type="Area2D"]

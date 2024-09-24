@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0dbc4ueiaksq"]
+
+[ext_resource type="Texture2D" uid="uid://6moms2faunbr" path="res://assets/basketball-hoop.png" id="1_r6v7x"]
+[ext_resource type="PackedScene" uid="uid://s7nlrrxf4sbm" path="res://rim.tscn" id="2_kvx0m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2rb8v"]
+size = Vector2(32, 32)
+
+[node name="BasketballHoop" type="Area2D"]
+scale = Vector2(5, 5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r6v7x")
+
+[node name="LeftRim" parent="." instance=ExtResource("2_kvx0m")]
+position = Vector2(-9, 6)
+
+[node name="RightRim" parent="." instance=ExtResource("2_kvx0m")]
+position = Vector2(9, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2rb8v")

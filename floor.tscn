@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdcr0chdlgogc"]
+
+[ext_resource type="Script" path="res://floor.gd" id="1_2i76c"]
+[ext_resource type="Texture2D" uid="uid://c1v484ypc1est" path="res://zebra-block.png" id="1_4frr4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86juu"]
+
+[node name="Floor" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_2i76c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_86juu")
+
+[node name="Sprite2D" type="Polygon2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("1_4frr4")
+polygon = PackedVector2Array(32, 32, -32, 32, -32, -32, 32, -32)
+uv = PackedVector2Array(64, 64, 0, 64, 0, 0, 64, 0)
+polygons = [PackedInt32Array(0, 1, 2, 3)]

@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=3 uid="uid://daob6ioq3sry7"]
+
+[ext_resource type="Texture2D" uid="uid://vslcrdbj3y68" path="res://assets/Purple-Robot-Idle.png" id="1_33ums"]
+[ext_resource type="Script" path="res://player.gd" id="1_j3hio"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xl51"]
+atlas = ExtResource("1_33ums")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd03u"]
+atlas = ExtResource("1_33ums")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2kim"]
+atlas = ExtResource("1_33ums")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnqjq"]
+atlas = ExtResource("1_33ums")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opn47"]
+atlas = ExtResource("1_33ums")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nijec"]
+atlas = ExtResource("1_33ums")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0qbe"]
+atlas = ExtResource("1_33ums")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga8oe"]
+atlas = ExtResource("1_33ums")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f13ud"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xl51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yd03u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2kim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnqjq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opn47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nijec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0qbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga8oe")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tfxfa"]
+radius = 8.0
+height = 26.0
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 4
+script = ExtResource("1_j3hio")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f13ud")
+animation = &"Idle"
+autoplay = "Idle"
+frame = 6
+frame_progress = 0.0399858
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
+shape = SubResource("CapsuleShape2D_tfxfa")

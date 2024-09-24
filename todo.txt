@@ -1,0 +1,15 @@
+9/23/2024
+
+IDEAS / TODO list / VISION
+
+1) I need to make the guy throw the basketball
+a) I need to have a jump mechanic.
+b) I need to have a throw power mechanic.
+c) I need to have an angle mechanic.
+d) I need to have a spin mechanic.
+
+2) Mechanic getting stabbed by a spear. Slow down in area2d node.
+3) Explosion mechanic, create a 2d area node, with a negative gravity center.
+4) I have to design a basketball character sprite... with animations
+5) I need to have a scoreboard... that is also UI
+6) I need to create a video game song
